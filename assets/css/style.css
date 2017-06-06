@@ -1,0 +1,51 @@
+
+.nav {
+  background-color: lightblue;
+}
+
+h4 {
+  margin-left: 10px;
+}
+
+.currentSchedule {
+  width: 95%;
+  margin: 0 auto;
+  height: auto;
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+.addTrain {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 15px;
+  height: auto;
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+#trainTableDiv {
+  margin: 5px;
+  margin-top: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: black;
+
+}
+
+th {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+#trainTable {
+  width: 100%;
+}

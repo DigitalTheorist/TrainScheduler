@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TrainScheduler</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!--CSS-->
+  <link href="https://fonts.googleapis.com/css?family=Alegreya:900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<!--Large Header-->
+<div class="container container-fluid">
+  <div class="jumbotron">
+    <h1>Train Scheduler</h1>
+  </div>
+</div>
+
+
+<!--The current personalized train schedule-->
+<div class="currentSchedule">
+  <nav class="nav nabar-default">
+    <h4>Current Schedule</h4>
+  </nav>
+
+<div id="trainTableDiv">
+
+  <table id="trainTable">
+    <tr id="tableHeader">
+      <th>Train Name</th>
+      <th>Destination</th>
+      <th>First Train Time</th>
+      <th>Frequency</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+
+  </table>
+
+</div>
+
+
+</div><!--currentSchedule endtag-->
+
+
+<!--Customer has the ability to add trains to further personalize schedule here-->
+<div class="addTrain">
+
+  <nav class="nav nabar-default">
+    <h4>Add a Train</h4>
+  </nav>
+
+<form class="" action="index.html" method="post">
+
+  <h5>Train Name:</h5>
+  <input id="trainName" type="text" name="Train Name" value=""><br>
+
+    <h5>Destination:</h5>
+    <input id="destination" type="text" name="Destination" value=""><br>
+
+      <h5>First Train Time:</h5>
+      <input id="firstTrain" type="text" name="First Train Time" value=""><br>
+
+        <h5>Frequency:</h5>
+        <input id="frequency" type="text" name="Frequency" value="">
+        <br><br>
+
+  <input class="btn btn-primary" id="formSubmission" type="submit" name="" value="Submit">
+
+</form>
+      </div> <!--addTrain endtag-->
+
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="assets/javascript/app.js"></script>
+
+
+</body>
