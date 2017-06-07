@@ -30,6 +30,7 @@
 <div class="container container-fluid">
   <div class="jumbotron">
     <h1>Train Scheduler</h1>
+    <h3>"Take The Gravy Train to Mashed Potato Town!"</h3>
   </div>
 </div>
 
@@ -46,16 +47,10 @@
     <tr id="tableHeader">
       <th>Train Name</th>
       <th>Destination</th>
-      <th>First Train Time</th>
-      <th>Frequency</th>
+      <th>Frequency (min)</th>
+      <th>Next Arrival</th>
+      <th>Minutes Away</th>
     </tr>
-    <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-    </tr>
-
   </table>
 
 </div>
@@ -74,16 +69,16 @@
 <form class="" action="index.html" method="post">
 
   <h5>Train Name:</h5>
-  <input id="trainName" type="text" name="Train Name" value=""><br>
+  <input class="inputs" id="trainName" type="text" name="Train Name" value=""><br>
 
     <h5>Destination:</h5>
-    <input id="destination" type="text" name="Destination" value=""><br>
+    <input class="inputs" id="destination" type="text" name="Destination" value=""><br>
 
-      <h5>First Train Time:</h5>
-      <input id="firstTrain" type="text" name="First Train Time" value=""><br>
+      <h5>First Train Arrival <br> (24hr format HH:mm):</h5>
+      <input id="firstTrain" type="time" name="First Train Time" value=""><br>
 
-        <h5>Frequency:</h5>
-        <input id="frequency" type="text" name="Frequency" value="">
+        <h5>Frequency <br> (24hr format HH:mm):</h5>
+        <input id="frequency" type="time" name="Frequency" value="">
         <br><br>
 
   <input class="btn btn-primary" id="formSubmission" type="submit" name="" value="Submit">
@@ -102,6 +97,12 @@
 
   <script
   src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+
+
+
+
 
   <script src="assets/javascript/app.js"></script>
 

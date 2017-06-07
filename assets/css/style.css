@@ -35,17 +35,20 @@ h4 {
   border-width: 2px;
   border-radius: 5px;
   border-color: black;
+  padding-bottom: 25px;
 
 }
 
-th {
+th, td {
   text-align: center;
-}
-
-td {
-  text-align: center;
+  padding: 5px;
+  border-bottom: 2px solid black;
 }
 
 #trainTable {
+  width: 100%;
+}
+
+.inputs {
   width: 100%;
 }
