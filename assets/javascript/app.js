@@ -10,13 +10,14 @@ var config = {
 };
 
 firebase.initializeApp(config);
-                    // GLOBAL VARIABLES. 
+
+                    // GLOBAL VARIABLES.
 //----------------------------------------------------------------------------------
 var database = firebase.database();
 
 var nameOfTrain, whereTo, firstTrainTime, freq;
 
-
+                  //FIREBASE SETTING FUNCTION.
 //----------------------------------------------------------------------------------
 database.ref().on("value", function(snapshot) { // This function is the setting function from Firebase.
 
@@ -27,11 +28,11 @@ whereTo = snapshot.val().destination;
 firstTrainTime = snapshot.val().departure;
 freq = snapshot.val().frequency;
 
-//Dynamically inserts table rows with concatenated variables.
+//Dynamically inserts table rows w/ concatenated variables.
 var tableRow =
-$("<tr><td>" + nameOfTrain
+$ ("<tr><td>" + nameOfTrain
 + "</td><td>" + whereTo
-+ "</td><td>" + freq
++ "</td><td>" + freq + " HH:mm"
 + "</td><td>" + // calculation function (variable) for NEXT ARRIVAL field goes here.
 + "</td><td>" + // calculation function (variable) for MINUTES AWAY field goes here.
 + "</td></tr>");
@@ -52,6 +53,7 @@ nameOfTrain =    $("#trainName").val().trim();
 whereTo =        $("#destination").val().trim();
 firstTrainTime = $("#firstTrain").val().trim();
 freq =           $("#frequency").val().trim();
+console.log("this is freq " + freq);
 
                 //Math manipulation of First Train Arrival user input.
 //----------------------------------------------------------------------------------
@@ -65,7 +67,7 @@ var x = ((firstHourParsed * 60) + firstMinutesParsed);
 // console.log("this is x " + x);
 //----------------------------------------------------------------------------------
 
-              //Math manipulation of Frequency user input.
+                //Math manipulation of Frequency user input.
 //----------------------------------------------------------------------------------
 var freqHoursSliced = freq.slice(0, 2);
 var freqHoursParsed = parseInt(freqHoursSliced, 10);
@@ -94,15 +96,11 @@ database.ref().set({
   frequency: freq
 })
 
-
-
 // clears user input fields.
 $("#trainName").val(' ');
 $("#destination").val(' ');
 // $("#firstTrain").val(' ');
 // $("#frequency").val(' ');
 //----------------------------------------------------------------------------------
-
-
 
 }); //Onclick function endtag
