@@ -1,3 +1,6 @@
+body {
+  background-image: url(../images/scribble_light.png)
+}
 
 .nav {
   background-color: lightblue;
@@ -5,6 +8,23 @@
 
 h4 {
   margin-left: 10px;
+}
+
+.clockWall {
+  text-align: center;
+  border: solid;
+  border-radius: 10px;
+  padding-bottom: 15px;
+}
+
+.clocks {
+  display: inline-block;
+  margin-left: 10px;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  margin-left: 60px;
+  margin-right:60px;
 }
 
 .currentSchedule {
@@ -35,8 +55,8 @@ h4 {
   border-width: 2px;
   border-radius: 5px;
   border-color: black;
+  background-color: white;
   padding-bottom: 25px;
-
 }
 
 th, td {

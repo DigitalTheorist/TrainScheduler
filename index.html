@@ -4,11 +4,11 @@
 
 <head>
 
-<meta charset="utf-8">
+  <meta charset="utf-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TrainScheduler</title>
+  <title>TrainScheduler</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -26,86 +26,116 @@
 
 <body>
 
-<!--Large Header-->
-<div class="container container-fluid">
-  <div class="jumbotron">
-    <h1>Train Scheduler</h1>
-    <h3>"Take The Gravy Train to Mashed Potato Town!"</h3>
+  <!--Large Header-->
+
+    <div class="jumbotron">
+      <div class="container container-fluid">
+        <div class="clockWall">
+
+          <div class="clocks">
+            <h5>San Francisco</h5>
+            <iframe src="http://free.timeanddate.com/clock/i5r5hxid/n224/szw80/szh80/hoc000/hbw4/cf100/hgr0/fav0/fiv0/mqc000/mqs3/mql25/mqw6/mqd96/mhc000/mhs3/mhl20/mhw6/mhd96/mmc000/mms3/mml10/mmw2/mmd96/hhw16/hmw16/hmr4/hsc000/hss3/hsl90" frameborder="0" width="80" height="80"></iframe>
+          </div>
+
+          <div class="clocks">
+            <h5>New York</h5>
+            <iframe
+             src="http://free.timeanddate.com/clock/i5r5i0dl/n179/szw80/szh80/hoc000/hbw4/cf100/hgr0/fav0/fiv0/mqc000/mqs3/mql25/mqw6/mqd96/mhc000/mhs3/mhl20/mhw6/mhd96/mmc000/mms3/mml10/mmw2/mmd96/hhw16/hmw16/hmr4/hsc000/hss3/hsl90" frameborder="0" width="80" height="80"></iframe>
+          </div>
+
+          <div class="clocks">
+            <h5>Paris</h5>
+            <iframe src="http://free.timeanddate.com/clock/i5r5i0dl/n195/szw80/szh80/hoc000/hbw4/cf100/hgr0/fav0/fiv0/mqc000/mqs3/mql25/mqw6/mqd96/mhc000/mhs3/mhl20/mhw6/mhd96/mmc000/mms3/mml10/mmw2/mmd96/hhw16/hmw16/hmr4/hsc000/hss3/hsl90" frameborder="0" width="80" height="80"></iframe>
+          </div>
+
+          <div class="clocks">
+            <h5>Mumbai</h5>
+            <iframe src="http://free.timeanddate.com/clock/i5r5i81i/n44/szw80/szh80/hoc000/hbw4/cf100/hgr0/fav0/fiv0/mqc000/mqs3/mql25/mqw6/mqd96/mhc000/mhs3/mhl20/mhw6/mhd96/mmc000/mms3/mml10/mmw2/mmd96/hhw16/hmw16/hmr4/hsc000/hss3/hsl90" frameborder="0" width="80" height="80"></iframe>
+          </div>
+
+          <div class="clocks">
+            <h5>Tokyo</h5>
+            <iframe src="http://free.timeanddate.com/clock/i5r5i9za/n248/szw80/szh80/hoc000/hbw4/cf100/hgr0/fav0/fiv0/mqc000/mqs3/mql25/mqw6/mqd96/mhc000/mhs3/mhl20/mhw6/mhd96/mmc000/mms3/mml10/mmw2/mmd96/hhw16/hmw16/hmr4/hsc000/hss3/hsl90" frameborder="0" width="80" height="80"></iframe>
+          </div>
+
+        </div><!--clockWall endtag-->
+
+      <h1>Train Departures</h1>
+      <h3>"Take The Gravy Train to Mashed Potato Town!"</h3>
+
+    </div><!--container-fluid endtag-->
+  </div><!--jumbotron endtag-->
+
+
+  <!--The current personalized train schedule-->
+  <div class="currentSchedule">
+    <nav class="nav nabar-default">
+      <h4>Current Schedule</h4>
+    </nav>
+
+    <div id="trainTableDiv">
+
+      <table id="trainTable">
+        <tr id="tableHeader">
+          <th>Train Name</th>
+          <th>Destination</th>
+          <th>Frequency</th>
+          <th>Next Arrival</th>
+          <th>Minutes Away</th>
+        </tr>
+      </table>
+
+    </div>
+
+
   </div>
-</div>
+  <!--currentSchedule endtag-->
 
 
-<!--The current personalized train schedule-->
-<div class="currentSchedule">
-  <nav class="nav nabar-default">
-    <h4>Current Schedule</h4>
-  </nav>
+  <!--Customer has the ability to add trains to further personalize schedule here-->
+  <div class="addTrain">
 
-<div id="trainTableDiv">
+    <nav class="nav nabar-default">
+      <h4>Add a Train</h4>
+    </nav>
 
-  <table id="trainTable">
-    <tr id="tableHeader">
-      <th>Train Name</th>
-      <th>Destination</th>
-      <th>Frequency</th>
-      <th>Next Arrival</th>
-      <th>Minutes Away</th>
-    </tr>
-  </table>
+    <form class="" action="index.html" method="post">
 
-</div>
-
-
-</div><!--currentSchedule endtag-->
-
-
-<!--Customer has the ability to add trains to further personalize schedule here-->
-<div class="addTrain">
-
-  <nav class="nav nabar-default">
-    <h4>Add a Train</h4>
-  </nav>
-
-  <form class="" action="index.html" method="post">
-
-    <h5>Train Name:</h5>
-    <input class="inputs" id="trainName" type="text" name="Train Name" value=""><br>
+      <h5>Train Name:</h5>
+      <input class="inputs" id="trainName" type="text" name="Train Name" value=""><br>
 
       <h5>Destination:</h5>
       <input class="inputs" id="destination" type="text" name="Destination" value=""><br>
 
-        <h5>First Train Arrival <br> (24hr format HH:mm):</h5>
-        <input id="firstTrain" type="time" name="First Train Time" value=""><br>
+      <h5>First Train Arrival <br> (24hr format HH:mm):</h5>
+      <input id="firstTrain" type="time" name="First Train Time" value=""><br>
 
-          <h5>Frequency <br> (24hr format HH:mm):</h5>
-          <input id="frequency" type="time" name="Frequency" value="">
-            <br><br>
+      <h5>Frequency <br> (enter in minutes):</h5>
+      <input id="frequency" type="text" name="Frequency" value="">
+      <br><br>
 
-          <!--Submit Button-->
-          <input class="btn btn-primary" id="formSubmission" type="submit" name="" value="Submit">
+      <!--Submit Button-->
+      <input class="btn btn-primary" id="formSubmission" type="submit" name="" value="Submit">
 
-  </form>
-</div> <!--addTrain endtag-->
+    </form>
+  </div>
+  <!--addTrain endtag-->
 
 
 
 
-<!-- Latest compiled and minified JavaScript -->
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-  <script
-  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+
+
 
   <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 
-
-
-
-
-  <script src="assets/javascript/app.js"></script>
+  <script src="assets/javascript/app1.js"></script>
 
 
 </body>
